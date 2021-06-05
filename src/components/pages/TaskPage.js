@@ -1,6 +1,6 @@
 import React from "react";
 
-import {Container, Grid} from "@material-ui/core";
+import { Container, Grid } from "@material-ui/core";
 
 export default function TaskPage(props) {
     return (

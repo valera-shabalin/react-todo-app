@@ -13,7 +13,7 @@ import {
     makeStyles
 } from "@material-ui/core";
 
-import {ChevronRight, ExitToApp, List as ListIcon, Person, Settings} from "@material-ui/icons";
+import {ChevronLeft, ExitToApp, List as ListIcon, Person, Settings} from "@material-ui/icons";
 
 const useStyle = makeStyles({
     drawer: {
@@ -22,6 +22,9 @@ const useStyle = makeStyles({
     },
     drawerPaper: {
         width: 260
+    },
+    item: {
+        color: "#757575"
     }
 });
 
@@ -62,8 +65,8 @@ function NavigationDrawer({ open, handleDrawer }) {
             }}
         >
             <div>
-                <IconButton>
-                    <ChevronRight onClick={handleDrawer}/>
+                <IconButton onClick={handleDrawer}>
+                    <ChevronLeft/>
                 </IconButton>
             </div>
             <Divider/>
@@ -77,7 +80,7 @@ function NavigationDrawer({ open, handleDrawer }) {
                                     <ListItemIcon>
                                         <Icon/>
                                     </ListItemIcon>
-                                    <ListItemText primary={item.text}/>
+                                    <ListItemText primary={item.text} className={classes.item}/>
                                 </ListItem>
                             </Link>
                         );

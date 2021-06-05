@@ -1,23 +1,23 @@
 import React from "react";
 import { Switch, Route } from "react-router-dom";
 
-import Navigation from "./components/Navigation/Navigation";
+import Navigation from "./components/navigation/Navigation";
 import HomePage from "./components/pages/HomePage";
 import SettingsPage from "./components/pages/SettingsPage";
 import TodoPage from "./components/pages/TodoPage";
 import TaskPage from "./components/pages/TaskPage";
 import NotFoundPage from "./components/pages/NotFoundPage";
 
-import { makeStyles } from "@material-ui/core/styles";
+import { makeStyles } from "@material-ui/core";
 
-const useStyles = makeStyles({
+const useStyle = makeStyles({
     root: {
         marginTop: 74
     }
 });
 
 export default function App() {
-    const classes = useStyles();
+    const classes = useStyle();
 
     return (
         <div className="App">
