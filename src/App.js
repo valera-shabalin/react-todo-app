@@ -12,7 +12,10 @@ import { makeStyles } from "@material-ui/core";
 
 const useStyle = makeStyles({
     root: {
-        marginTop: 74
+        paddingTop: 74,
+        height: "100vh",
+        width: "100vw",
+        boxSizing: "border-box"
     }
 });
 
