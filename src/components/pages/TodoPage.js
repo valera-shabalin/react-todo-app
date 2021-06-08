@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 
 import {
@@ -8,8 +8,6 @@ import {
     Checkbox,
     makeStyles
 } from "@material-ui/core";
-
-import { Pagination } from '@material-ui/lab';
 
 const useStyle = makeStyles({
     title: {
@@ -40,6 +38,20 @@ export default function TodoPage() {
         }
     ]);
     const classes = useStyle();
+
+    useEffect(async () => {
+       try {
+           const response = await fetch("https://api-nodejs-todolist.herokuapp.com/task");
+           const result = await response.json();
+
+       } catch (err) {
+           console.log(err)
+       }
+
+       return () => {
+
+       }
+    });
 
     return (
         <Container>

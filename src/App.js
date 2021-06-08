@@ -6,6 +6,8 @@ import HomePage from "./components/pages/HomePage";
 import SettingsPage from "./components/pages/SettingsPage";
 import TodoPage from "./components/pages/TodoPage";
 import TaskPage from "./components/pages/TaskPage";
+import LoginPage from "./components/pages/LoginPage";
+import RegisterPage from "./components/pages/RegisterPage";
 import NotFoundPage from "./components/pages/NotFoundPage";
 
 import { makeStyles } from "@material-ui/core";
@@ -31,6 +33,8 @@ export default function App() {
                     <Route path="/settings" component={SettingsPage}/>
                     <Route exact path="/todo" component={TodoPage}/>
                     <Route path="/todo/task/:id(\d+)" component={TaskPage}/>
+                    <Route path="/login" component={LoginPage}/>
+                    <Route path="/register" component={RegisterPage}/>
                     <Route path="*" component={NotFoundPage}/>
                 </Switch>
             </main>
